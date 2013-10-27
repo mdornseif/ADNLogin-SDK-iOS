@@ -34,6 +34,8 @@ Should be entered into the URL scheme editor this way:
 
 ![Xcode Info.plist editor screenshot](https://files.app.net/1/34450/a_mk_VrbaUl2WRLeE5vVbZ--R0WdluIo80CxSZ9NC1d1t35Mwbh9HjR6_jrPQSbamKvINn06ztwICNYpJoMhzHwHTqP7laHmXdWC4_vvRAFrpcpBfpXoWtwH77ohNePRsm0b-rhsnFjvzaSRniK_OPkUqf5H1Ai2z7CAhSHjP3Ek)
 
+Identifier and URL scheme should be considered secret. Anybody knowing these two and your App Identifier can create requests seeming to originate from your App.
+
 Often, developers create multiple apps which share the same App.net client ID but which are represented by different applications in the iOS app store. Each application in iTunes should have the URL scheme for alternate versions with an app-unique identifier, e.g., "ipad" for the iPad version of an application. This suffix should match with the information entered in the app management interface on App.net.
 
 Each bundle ID must be associated with an App.net application in the [developer management interface](https://account.app.net/developer/apps/). You may either whitelist your bundle ID for test apps or create a Directory Page for your production-ready app. (You do not need to make your page public in order to use the SDK.) **If you receive the "Failed to load authorize dialog" error, a mismatch of bundle ID is most likely the problem.** Note that bundle ID matching is case-sensitive. Be sure that you are matching the bundle ID exactly.
